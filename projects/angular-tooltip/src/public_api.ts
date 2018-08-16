@@ -5,3 +5,5 @@
 export * from './lib/angular-tooltip.service';
 export * from './lib/angular-tooltip.component';
 export * from './lib/angular-tooltip.module';
+
+export * from './lib/angular-tooltip.directive';
