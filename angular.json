@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "angular-tooltip": {
+      "root": "projects/angular-tooltip",
+      "sourceRoot": "projects/angular-tooltip/src",
+      "projectType": "library",
+      "prefix": "at",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-tooltip/tsconfig.lib.json",
+            "project": "projects/angular-tooltip/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-tooltip/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-tooltip/src/test.ts",
+            "tsConfig": "projects/angular-tooltip/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-tooltip/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-tooltip/tsconfig.lib.json",
+              "projects/angular-tooltip/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-tooltip-app"

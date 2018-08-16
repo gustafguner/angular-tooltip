@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-tooltip": [
+        "dist/angular-tooltip"
+      ],
+      "angular-tooltip/*": [
+        "dist/angular-tooltip/*"
+      ]
+    }
   }
 }
