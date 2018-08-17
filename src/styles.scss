@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
+body{
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*{
+
+}
+
+.btn{
+  width: 140px;
+  height: 50px;
+  background-color: #3498db;
+  display: block;
+  border-radius: 7px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.at-container{
+  position: relative;
+  .at-tooltip{
+    position: absolute;
+    display: none;
+    background-color: rgb(50,50,50);
+  }
+  &.at-active{
+    .at-tooltip{
+      display: block;
+    }
+  }
+}
