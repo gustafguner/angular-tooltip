@@ -1,4 +1,4 @@
-import { Directive, HostListener } from '@angular/core';
+import { Directive, HostListener, Renderer, ElementRef } from '@angular/core';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -10,6 +10,10 @@ export class AngularTooltipDirective {
 
   @HostListener('mouseenter') onmouseenter() {
     alert();
+  }
+
+  OnInit() {
+
   }
 
 }
