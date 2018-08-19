@@ -6,17 +6,19 @@ import { Directive, HostListener, ElementRef, Renderer2, Input } from '@angular/
 })
 export class TooltipTestDirective {
   @Input('tooltip-text') tooltipText: string;
+  @Input('tooltip-direction') tooltipDirection: string;
   tooltip: any;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.renderer.addClass(this.el.nativeElement, 'at-container');
-    console.log(this.tooltipText);
     this.tooltip = this.renderer.createElement('div');
-    this.renderer.addClass(this.tooltip, 'at-tooltip');
     const tooltipContent = this.renderer.createText(this.tooltipText);
     this.renderer.appendChild(this.tooltip, tooltipContent);
+    this.renderer.addClass(this.tooltip, 'at-tooltip');
+
+    this.renderer.addClass(this.tooltip, 'bottom');
     this.renderer.appendChild(this.el.nativeElement, this.tooltip);
   }
 

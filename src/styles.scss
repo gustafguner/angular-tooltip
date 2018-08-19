@@ -17,7 +17,7 @@ body{
   border-radius: 7px;
   line-height: 50px;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -31,6 +31,27 @@ body{
     position: absolute;
     display: none;
     background-color: rgb(50,50,50);
+    height: 20px;
+    font-size: 13px;
+    color: white;
+    line-height: 20px;
+    text-transform: none;
+    padding: 4px 7px;
+    border-radius: 4px;
+    &.top{
+
+    }
+    &.right{
+
+    }
+    &.bottom{
+      transform: translateY(6px) translateX(50%);
+      right: 50%;
+      top: 100%;
+    }
+    &.left{
+
+    }
   }
   &.at-active{
     .at-tooltip{
