@@ -30,39 +30,45 @@ body{
   position: relative;
   .at-tooltip{
     position: absolute;
-    display: none;
+    transition: all 0.2s ease;
     background-color: rgb(50,50,50);
     height: 20px;
-    font-size: 13px;
+    font-size: 14px;
     color: white;
     line-height: 20px;
     text-transform: none;
-    padding: 4px 7px;
+    padding: 5px 9px;
     border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
     &.top{
-      transform: translateY(-6px) translateX(50%);
+      transform: translateY(-9px) translateX(50%);
       right: 50%;
       bottom: 100%;
     }
     &.right{
-      transform: translateX(6px) translateY(-50%);
+      transform: translateX(9px) translateY(-50%);
       left: 100%;
       top: 50%;
     }
     &.bottom{
-      transform: translateY(6px) translateX(50%);
+      transform: scale(0.8) translateY(9px) translateX(50%);
       right: 50%;
       top: 100%;
+      transform-origin: right;
     }
     &.left{
-      transform: translateX(-6px) translateY(-50%);
+      transform: translateX(-9px) translateY(-50%);
       right: 100%;
       top: 50%;
     }
   }
   &.at-active{
     .at-tooltip{
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1) translateY(9px) translateX(50%);
     }
   }
 }
