@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
+
 body{
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-*{
-
 }
 
 .btn{
@@ -30,27 +27,29 @@ body{
   position: relative;
   .at-tooltip{
     position: absolute;
-    transition: all 0.2s ease;
-    background-color: rgb(50,50,50);
     height: 20px;
+    padding: 5px 9px;
+    background-color: rgb(50,50,50);
     font-size: 14px;
     color: white;
     line-height: 20px;
     text-transform: none;
-    padding: 5px 9px;
+    white-space: nowrap;
     border-radius: 4px;
     visibility: hidden;
     opacity: 0;
-    white-space: nowrap;
+    transition: all 0.15s ease;
     &.top{
-      transform: translateY(-9px) translateX(50%);
+      transform: scale(0.8) translateY(-9px) translateX(50%);
       right: 50%;
       bottom: 100%;
+      transform-origin: right;
     }
     &.right{
-      transform: translateX(9px) translateY(-50%);
+      transform: scale(0.8) translateX(9px) translateY(-50%);
       left: 100%;
       top: 50%;
+      transform-origin: left center;
     }
     &.bottom{
       transform: scale(0.8) translateY(9px) translateX(50%);
@@ -59,16 +58,28 @@ body{
       transform-origin: right;
     }
     &.left{
-      transform: translateX(-9px) translateY(-50%);
+      transform: scale(0.8) translateX(-9px) translateY(-50%);
       right: 100%;
       top: 50%;
+      transform-origin: right center;
     }
   }
   &.at-active{
     .at-tooltip{
       visibility: visible;
       opacity: 1;
-      transform: scale(1) translateY(9px) translateX(50%);
+      &.top{
+        transform: scale(1) translateY(-9px) translateX(50%);
+      }
+      &.right{
+        transform: scale(1) translateX(9px) translateY(-50%);
+      }
+      &.bottom{
+        transform: scale(1) translateY(9px) translateX(50%);
+      }
+      &.left{
+        transform: scale(1) translateX(-9px) translateY(-50%);
+      }
     }
   }
 }

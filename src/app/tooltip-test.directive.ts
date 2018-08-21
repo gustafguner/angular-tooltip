@@ -18,7 +18,12 @@ export class TooltipTestDirective {
     this.renderer.appendChild(this.tooltip, tooltipContent);
     this.renderer.addClass(this.tooltip, 'at-tooltip');
 
-    this.renderer.addClass(this.tooltip, 'bottom');
+    if (/^(top|right|bottom|left)$/.test(this.tooltipDirection)) {
+      this.renderer.addClass(this.tooltip, this.tooltipDirection);
+    } else {
+      this.renderer.addClass(this.tooltip, 'bottom');
+    }
+
     this.renderer.appendChild(this.el.nativeElement, this.tooltip);
   }
 
