@@ -23,6 +23,7 @@ body{
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  margin: 0 auto;
 }
 
 .at-container{
@@ -39,10 +40,14 @@ body{
     padding: 4px 7px;
     border-radius: 4px;
     &.top{
-
+      transform: translateY(-6px) translateX(50%);
+      right: 50%;
+      bottom: 100%;
     }
     &.right{
-
+      transform: translateX(6px) translateY(-50%);
+      left: 100%;
+      top: 50%;
     }
     &.bottom{
       transform: translateY(6px) translateX(50%);
@@ -50,7 +55,9 @@ body{
       top: 100%;
     }
     &.left{
-
+      transform: translateX(-6px) translateY(-50%);
+      right: 100%;
+      top: 50%;
     }
   }
   &.at-active{
