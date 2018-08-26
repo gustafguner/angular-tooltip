@@ -33,10 +33,12 @@ export class TooltipTestDirective {
   }
 
   @HostListener('mouseenter') onmouseenter() {
+    this.renderer.removeClass(this.atWrapper, 'at-deactivate');
     this.renderer.addClass(this.atWrapper, 'at-active');
   }
 
   @HostListener('mouseleave') onmouseleave() {
     this.renderer.removeClass(this.atWrapper, 'at-active');
+    this.renderer.addClass(this.atWrapper, 'at-deactivate');
   }
 }
