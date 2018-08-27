@@ -31,7 +31,7 @@ export class TooltipTestDirective {
     }
 
     // Tooltip effect class
-    if (/^(zoom|fade)$/.test(this.tooltipEffect)) {
+    if (/^(zoom|fade|slide)$/.test(this.tooltipEffect)) {
       this.renderer.addClass(this.atTooltip, this.tooltipEffect);
     } else {
       this.renderer.addClass(this.atTooltip, 'zoom');
