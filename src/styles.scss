@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
-html,body{
+*{
+  box-sizing: border-box;
 }
 html,body{
   font-family: IBM Plex Sans, sans-serif;
@@ -472,6 +473,7 @@ Animation: Slide (Left) (Reverse)
   pre{
     color: white;
     font-family: Space Mono, monospace;
+    font-weight: 700;
     .dollar{
       float: left;
       margin-right: 10px;
@@ -479,13 +481,32 @@ Animation: Slide (Left) (Reverse)
       line-height: 19px;
       margin-top: 3px;
       color: rgb(100,100,100);
+      font-weight: 400;
       cursor: default;
     }
   }
 }
 
+.text-content{
+  p{
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+    color: #2c3e50;
+    a{
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover{
+        color: #cb3524;
+      }
+    }
+  }
+}
+
 header{
-  margin: 40px 0 80px 0;
+  margin: 40px 0 60px 0;
   .title{
     margin-bottom: 28px;
     h1{
@@ -512,27 +533,22 @@ header{
     }
   }
   .author{
-    p{
-      text-align: center;
-      font-size: 18px;
-      margin: 0;
-      font-weight: 500;
-      color: #2c3e50;
-      a{
-        color: #e74c3c;
-        text-decoration: none;
-        font-weight: 600;
-        &:hover{
-          color: #cb3524;
-        }
-      }
+    margin-bottom: 35px;
+  }
+  .links{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    .btn{
+      display: flex;
+      align-items: center;
     }
   }
 }
 
 .features{
   .feature{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     &:last-child{
       margin-bottom: 0;
     }
@@ -549,12 +565,11 @@ header{
 }
 
 .btn{
-  width: 140px;
+  display: block;
+  min-width: 140px;
   height: 50px;
   background-color: #e74c3c;
-  display: block;
   border-radius: 7px;
-  line-height: 50px;
   text-align: center;
   font-size: 15px;
   font-weight: 600;
@@ -562,8 +577,32 @@ header{
   text-decoration: none;
   color: white;
   margin: 0 auto;
+  padding: 15px 20px;
+  &.blue{
+    background-color: #00a8ff;
+  }
+  &.gray{
+    background-color:#7b5b5b;
+    &:hover{
+      background-color: #674848;
+    }
+  }
   &:hover{
     background-color: #cb3524;
+  }
+  span{
+    float: left;
+    &.text{
+      margin-right: 15px;
+    }
+    &.icon{
+      width: 24px;
+      height: 24px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -594,7 +633,7 @@ at-wrapper{
   at-tooltip{
     z-index: 2;
     position: absolute;
-    height: 20px;
+    height: 30px;
     padding: 5px 9px;
     background-color: rgb(50,50,50);
     font-size: 15px;
@@ -727,5 +766,8 @@ at-wrapper{
 
 footer{
   width: 100%;
-  height: 200px;
+  .text-content{
+    width: 100%;
+    margin: 80px 0;
+  }
 }
