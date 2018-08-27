@@ -163,13 +163,13 @@ header{
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  at-wrapper{
+  tooltip-test{
     margin: 0 20px 0 0;
     &:last-child{
       margin: 0;
     }
   }
-  tooltip-test{
+  angular-tooltip{
     margin: 0 20px 0 0;
     &:last-child{
       margin: 0;
