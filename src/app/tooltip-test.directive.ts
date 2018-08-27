@@ -6,6 +6,7 @@ import { Directive, HostListener, ElementRef, Renderer2, Input } from '@angular/
 export class TooltipTestDirective {
   @Input('tooltip-text') tooltipText: string;
   @Input('tooltip-direction') tooltipDirection: string;
+  @Input('tooltip-effect') tooltipEffect: string;
 
   atTooltip: ElementRef;
   atWrapper: ElementRef;
@@ -21,10 +22,19 @@ export class TooltipTestDirective {
     this.atTooltip = this.renderer.createElement('at-tooltip');
     const tooltipContent = this.renderer.createText(this.tooltipText);
     this.renderer.appendChild(this.atTooltip, tooltipContent);
+
+    // Tooltip direction class
     if (/^(top|right|bottom|left)$/.test(this.tooltipDirection)) {
       this.renderer.addClass(this.atTooltip, this.tooltipDirection);
     } else {
       this.renderer.addClass(this.atTooltip, 'bottom');
+    }
+
+    // Tooltip effect class
+    if (/^(zoom|fade)$/.test(this.tooltipEffect)) {
+      this.renderer.addClass(this.atTooltip, this.tooltipEffect);
+    } else {
+      this.renderer.addClass(this.atTooltip, 'zoom');
     }
 
     this.renderer.appendChild(this.atWrapper, this.atTooltip);

@@ -142,6 +142,135 @@ Animation: Zoom (Left) (Reverse)
   }
 }
 
+/*
+Animation: Fade (Top)
+*/
+@keyframes fade-top {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateY(-9px) translateX(50%);
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateY(-9px) translateX(50%);
+  }
+}
+/*
+Animation: Fade (Top) (Reverse)
+*/
+@keyframes fade-top-rev {
+  0%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateY(-9px) translateX(50%);
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateY(-9px) translateX(50%);
+  }
+}
+
+
+/*
+Animation: Fade (Right)
+*/
+@keyframes fade-right {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(9px) translateY(-50%);
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(9px) translateY(-50%);
+  }
+}
+
+/*
+Animation: Fade (Right) (Reverse)
+*/
+@keyframes fade-right-rev {
+  0%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(9px) translateY(-50%);
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(9px) translateY(-50%);
+  }
+}
+
+/*
+Animation: Fade (Bottom)
+*/
+@keyframes fade-bottom {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateY(9px) translateX(50%);
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateY(9px) translateX(50%);
+  }
+}
+
+/*
+Animation: Fade (Bottom) (Reverse)
+*/
+@keyframes fade-bottom-rev {
+  0%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateY(9px) translateX(50%);
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateY(9px) translateX(50%);
+  }
+}
+
+
+/*
+Animation: Fade (Left)
+*/
+@keyframes fade-left {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(-9px) translateY(-50%);
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(-9px) translateY(-50%);
+  }
+}
+
+/*
+Animation: Fade (Left) (Reverse)
+*/
+@keyframes zoom-left-rev {
+  0%{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(-9px) translateY(-50%);
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(-9px) translateY(-50%);
+  }
+}
+
 header{
   margin: 40px 0 80px 0;
   .title{
@@ -262,7 +391,6 @@ at-wrapper{
     border-radius: 4px;
     visibility: hidden;
     opacity: 0;
-    //transition: all 0.15s ease;
     &.top{
       transform: scale(0.8) translateY(-9px) translateX(50%);
       right: 50%;
@@ -290,33 +418,65 @@ at-wrapper{
   }
   &.at-active{
     at-tooltip{
-      &.top{
-        animation: zoom-top 0.15s ease forwards;
+      &.zoom{
+        &.top{
+          animation: zoom-top 0.15s ease forwards;
+        }
+        &.right{
+          animation: zoom-right 0.15s ease forwards;
+        }
+        &.bottom{
+          animation: zoom-bottom 0.15s ease forwards;
+        }
+        &.left{
+          animation: zoom-left 0.15s ease forwards;
+        }
       }
-      &.right{
-        animation: zoom-right 0.15s ease forwards;
-      }
-      &.bottom{
-        animation: zoom-bottom 0.15s ease forwards;
-      }
-      &.left{
-        animation: zoom-left 0.15s ease forwards;
+      &.fade{
+        &.top{
+          animation: fade-top 0.15s ease forwards;
+        }
+        &.right{
+          animation: fade-right 0.15s ease forwards;
+        }
+        &.bottom{
+          animation: fade-bottom 0.15s ease forwards;
+        }
+        &.left{
+          animation: fade-left 0.15s ease forwards;
+        }
       }
     }
   }
   &.at-deactivate{
     at-tooltip{
-      &.top{
-        animation: zoom-top-rev 0.15s ease forwards;
+      &.zoom{
+        &.top{
+          animation: zoom-top-rev 0.15s ease forwards;
+        }
+        &.right{
+          animation: zoom-right-rev 0.15s ease forwards;
+        }
+        &.bottom{
+          animation: zoom-bottom-rev 0.15s ease forwards;
+        }
+        &.left{
+          animation: zoom-left-rev 0.15s ease forwards;
+        }
       }
-      &.right{
-        animation: zoom-right-rev 0.15s ease forwards;
-      }
-      &.bottom{
-        animation: zoom-bottom-rev 0.15s ease forwards;
-      }
-      &.left{
-        animation: zoom-left-rev 0.15s ease forwards;
+      &.fade{
+        &.top{
+          animation: fade-top-rev 0.15s ease forwards;
+        }
+        &.right{
+          animation: fade-right-rev 0.15s ease forwards;
+        }
+        &.bottom{
+          animation: fade-bottom-rev 0.15s ease forwards;
+        }
+        &.left{
+          animation: fade-left-rev 0.15s ease forwards;
+        }
       }
     }
   }
