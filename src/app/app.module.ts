@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { AngularTooltipModule } from 'angular-tooltip';
 import { TooltipTestDirective } from './tooltip-test.directive';
+import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TooltipTestDirective
+    TooltipTestDirective,
+    TooltipTestComponent
   ],
   imports: [
     BrowserModule,
