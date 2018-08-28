@@ -1,6 +1,26 @@
 {
   "name": "angular-tooltip-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Gustaf Gunér (gustaf@guner.se)",
+  "description": "A demo for the angular-tooltip component",
+  "keywords": [
+    "angular",
+    "angular6",
+    "ng",
+    "ng6",
+    "tooltip",
+    "demo",
+    "javascript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustafguner/angular-tooltip/issues"
+  },
+  "homepage": "https://github.com/gustafguner/angular-tooltip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustafguner/angular-tooltip"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

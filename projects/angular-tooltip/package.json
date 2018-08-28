@@ -1,10 +1,16 @@
 {
   "name": "angular-tooltip",
+  "description": "An easy-to-use Angular (6+) component for displaying tooltips",
   "version": "1.0.0",
   "author": "Gustaf Gunér (gustaf@guner.se)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gustafguner/angular-tooltip/issues"
+  },
+  "homepage": "https://github.com/gustafguner/angular-tooltip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustafguner/angular-tooltip"
   },
   "keywords": [
     "angular",

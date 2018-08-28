@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { AngularTooltipComponent } from './angular-tooltip.component';
 
 @NgModule({
-  imports: [
-  ],
+  imports: [],
   declarations: [AngularTooltipComponent],
   exports: [AngularTooltipComponent]
 })
