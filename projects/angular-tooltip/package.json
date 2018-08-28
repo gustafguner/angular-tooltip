@@ -1,6 +1,18 @@
 {
   "name": "angular-tooltip",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "Gustaf Gunér (gustaf@guner.se)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustafguner/angular-tooltip/issues"
+  },
+  "keywords": [
+    "angular",
+    "angular6",
+    "component",
+    "tooltip",
+    "javascript"
+  ],
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
