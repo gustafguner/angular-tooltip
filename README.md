@@ -1,4 +1,4 @@
-# angular-toolip
+# angular-tooltip
 
 An easy-to-use Angular (6+) component for displaying tooltips.
 
