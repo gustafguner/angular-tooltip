@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
 *{
   box-sizing: border-box;
@@ -17,19 +17,19 @@ html,body{
   background-color: rgb(50,50,50);
   padding: 15px 35px;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
   pre{
     color: white;
-    font-family: Space Mono, monospace;
+    font-family: Roboto Mono, monospace;
     font-weight: 700;
     .dollar{
       float: left;
       margin-right: 10px;
-      font-size: 22px;
+      font-size: 17px;
       line-height: 19px;
-      margin-top: 3px;
+      margin-top: 2px;
       color: rgb(100,100,100);
       font-weight: 400;
       cursor: default;
