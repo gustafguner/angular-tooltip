@@ -21,7 +21,15 @@ export class TooltipTestComponent implements OnInit {
 
     this.trigger = this.renderer.createElement('at-trigger');
     this.tooltip = this.renderer.createElement('at-tooltip');
-    const tooltipContent = this.renderer.createText(this.tooltipText);
+
+    let tooltipContent;
+
+    if (this.tooltipText !== undefined) {
+      tooltipContent = this.renderer.createText(this.tooltipText);
+    } else {
+      tooltipContent = this.renderer.createText('Tooltip');
+    }
+
     this.renderer.appendChild(this.tooltip, tooltipContent);
 
     // Tooltip direction class
