@@ -24,8 +24,11 @@ import { AppComponent } from './app.component';
 import { AngularTooltipModule } from '@gustafguner/angular-tooltip';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
+    BrowserModule,
     AngularTooltipModule
   ],
   providers: [],
