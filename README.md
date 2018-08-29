@@ -10,7 +10,7 @@ Coming soon
 Install it via NPM
 
 ```shell
-npm install --save angular-tooltip
+npm install --save @gustafguner/angular-tooltip
 ```
 
 Then import the `AngularTooltipModule` and add it to `imports` in your `AppModule`.
@@ -21,7 +21,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { AngularTooltipModule } from 'angular-tooltip';
+import { AngularTooltipModule } from '@gustafguner/angular-tooltip';
 
 @NgModule({
   declarations: [AppComponent],
