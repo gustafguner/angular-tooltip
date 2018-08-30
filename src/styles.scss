@@ -25,7 +25,7 @@ html,body{
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: scroll;
   pre{
     color: white;
     font-family: Roboto Mono, monospace;
@@ -203,15 +203,20 @@ footer{
     }
   }
   .features{
-    .feature:nth-child(1) {
+    .feature {
       .buttons{
         angular-tooltip{
-          margin: 0 auto 20px auto;
-          &:nth-child(1) {order:2;}
-          &:nth-child(2) {order:1;}
-          &:nth-child(3) {order:4;}
-          &:nth-child(4) {order:3;}
+          margin: 0 50% 55px 50%;
+          &:last-child{
+            margin: 0 50% 0 50%;
+          }
         }
+      }
+      &:nth-child(2) {
+        &:nth-child(1) {order:2;}
+        &:nth-child(2) {order:1;}
+        &:nth-child(3) {order:4;}
+        &:nth-child(4) {order:3;}
       }
     }
   }
