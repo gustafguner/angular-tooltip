@@ -11,6 +11,11 @@ html,body{
   background: #ecf0f1;
   background: linear-gradient(0deg, #ecf0f1 30%, #fbe1e1 100%);
   background-repeat: no-repeat;
+  margin: 0;
+}
+
+.page-content{
+  padding: 0 20px;
 }
 
 .bash{
@@ -20,6 +25,7 @@ html,body{
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
   pre{
     color: white;
     font-family: Roboto Mono, monospace;
@@ -60,7 +66,6 @@ header{
   .title{
     margin-bottom: 28px;
     h1{
-      font-size: 700;
       font-style: italic;
       color: #e74c3c;
       font-size: 72px;
@@ -131,6 +136,9 @@ header{
   color: white;
   margin: 0 auto;
   padding: 15px 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
   &.blue{
     background-color: #00a8ff;
   }
@@ -163,6 +171,7 @@ header{
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  flex-flow: wrap;
   tooltip-test{
     margin: 0 20px 0 0;
     &:last-child{
@@ -182,5 +191,28 @@ footer{
   .text-content{
     width: 100%;
     margin: 80px 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  header{
+    .title{
+      h1{
+        font-size: 62px;
+      }
+    }
+  }
+  .features{
+    .feature:nth-child(1) {
+      .buttons{
+        angular-tooltip{
+          margin: 0 auto 20px auto;
+          &:nth-child(1) {order:2;}
+          &:nth-child(2) {order:1;}
+          &:nth-child(3) {order:4;}
+          &:nth-child(4) {order:3;}
+        }
+      }
+    }
   }
 }

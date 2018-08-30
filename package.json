@@ -31,7 +31,7 @@
     "build_lib": "ng build --prod angular-tooltip",
     "npm_pack": "cd dist/angular-tooltip && npm pack",
     "package": "npm run build_lib && npm run npm_pack",
-    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers \"last 2 versions\" -r projects/**/*.scss"
+    "ghp": "ng build --prod --base-href \"https://gustafguner.github.io/angular-tooltip/\" && npx ngh --dir=dist/angular-tooltip-app"
   },
   "private": true,
   "browserslist": [
