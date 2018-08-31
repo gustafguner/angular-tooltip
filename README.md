@@ -3,7 +3,7 @@
 An easy-to-use Angular (6+) component for displaying tooltips.
 
 ## Check it out in action
-Coming soon
+[Here](https://gustafguner.github.io/angular-tooltip/)
 
 ## Installation
 
